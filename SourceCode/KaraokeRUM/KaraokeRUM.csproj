@@ -1,0 +1,425 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Project ToolsVersion="15.0" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+  <Import Project="$(MSBuildExtensionsPath)\$(MSBuildToolsVersion)\Microsoft.Common.props" Condition="Exists('$(MSBuildExtensionsPath)\$(MSBuildToolsVersion)\Microsoft.Common.props')" />
+  <PropertyGroup>
+    <Configuration Condition=" '$(Configuration)' == '' ">Debug</Configuration>
+    <Platform Condition=" '$(Platform)' == '' ">AnyCPU</Platform>
+    <ProjectGuid>{1DF8468B-B9EE-4253-9786-9DB2781C1B24}</ProjectGuid>
+    <OutputType>WinExe</OutputType>
+    <RootNamespace>KaraokeRUM</RootNamespace>
+    <AssemblyName>KaraokeRUM</AssemblyName>
+    <TargetFrameworkVersion>v4.7.2</TargetFrameworkVersion>
+    <FileAlignment>512</FileAlignment>
+    <AutoGenerateBindingRedirects>true</AutoGenerateBindingRedirects>
+    <Deterministic>true</Deterministic>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Debug|AnyCPU' ">
+    <PlatformTarget>AnyCPU</PlatformTarget>
+    <DebugSymbols>true</DebugSymbols>
+    <DebugType>full</DebugType>
+    <Optimize>false</Optimize>
+    <OutputPath>bin\Debug\</OutputPath>
+    <DefineConstants>DEBUG;TRACE</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Release|AnyCPU' ">
+    <PlatformTarget>AnyCPU</PlatformTarget>
+    <DebugType>pdbonly</DebugType>
+    <Optimize>true</Optimize>
+    <OutputPath>bin\Release\</OutputPath>
+    <DefineConstants>TRACE</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+  </PropertyGroup>
+  <PropertyGroup>
+    <ApplicationIcon>Logo.ico</ApplicationIcon>
+  </PropertyGroup>
+  <ItemGroup>
+    <Reference Include="Microsoft.Office.Interop.Excel, Version=15.0.0.0, Culture=neutral, PublicKeyToken=71e9bce111e9429c, processorArchitecture=MSIL">
+      <SpecificVersion>False</SpecificVersion>
+      <EmbedInteropTypes>True</EmbedInteropTypes>
+      <HintPath>C:\Program Files (x86)\Microsoft Office\root\Office16\ADDINS\Microsoft Power Query for Excel Integrated\bin\Microsoft.Office.Interop.Excel.dll</HintPath>
+    </Reference>
+    <Reference Include="System" />
+    <Reference Include="System.Core" />
+    <Reference Include="System.Data.Linq" />
+    <Reference Include="System.Web" />
+    <Reference Include="System.Windows.Forms.DataVisualization" />
+    <Reference Include="System.Xml.Linq" />
+    <Reference Include="System.Data.DataSetExtensions" />
+    <Reference Include="Microsoft.CSharp" />
+    <Reference Include="System.Data" />
+    <Reference Include="System.Deployment" />
+    <Reference Include="System.Drawing" />
+    <Reference Include="System.Net.Http" />
+    <Reference Include="System.Windows.Forms" />
+    <Reference Include="System.Xml" />
+  </ItemGroup>
+  <ItemGroup>
+    <Compile Include="ClassControl\clsChiTietHoaDon.cs" />
+    <Compile Include="ClassControl\clsDonDatPhong.cs" />
+    <Compile Include="ClassControl\clsHoaDon.cs" />
+    <Compile Include="ClassControl\clsHonLoan.cs" />
+    <Compile Include="ClassControl\clsKetNoi.cs" />
+    <Compile Include="ClassControl\clsLoaiNhanVien.cs" />
+    <Compile Include="ClassControl\clsMatHang.cs" />
+    <Compile Include="ClassControl\clsKhachHang.cs" />
+    <Compile Include="ClassControl\clsLoaiKhach.cs" />
+    <Compile Include="ClassControl\clsNhanVien.cs" />
+    <Compile Include="ClassControl\clsPhongTrangThietBi.cs" />
+    <Compile Include="ClassControl\clsKiemTra.cs" />
+    <Compile Include="ClassControl\clsLoaiPhong.cs" />
+    <Compile Include="ClassControl\clsPhong.cs" />
+    <Compile Include="ClassControl\clsTaiKhoan.cs" />
+    <Compile Include="ClassControl\clsTaoButton.cs" />
+    <Compile Include="ClassControl\clsThietBi.cs" />
+    <Compile Include="ClassControl\clsThongKe.cs" />
+    <Compile Include="Form\frmLayLaiMatKhau.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Form\frmLayLaiMatKhau.Designer.cs">
+      <DependentUpon>frmLayLaiMatKhau.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Form\frmHoaDon.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Form\frmHoaDon.Designer.cs">
+      <DependentUpon>frmHoaDon.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Form\frmGioiThieu.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Form\frmGioiThieu.Designer.cs">
+      <DependentUpon>frmGioiThieu.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Form\frmChiTietPhong.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Form\frmChiTietPhong.Designer.cs">
+      <DependentUpon>frmChiTietPhong.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Form\frmDangNhap.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Form\frmDangNhap.Designer.cs">
+      <DependentUpon>frmDangNhap.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Form\frmDanhSachPhong.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Form\frmDanhSachPhong.Designer.cs">
+      <DependentUpon>frmDanhSachPhong.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Form\frmDoiMatKhau.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Form\frmDoiMatKhau.Designer.cs">
+      <DependentUpon>frmDoiMatKhau.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Form\frmQuanLyKhachHang.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Form\frmQuanLyKhachHang.Designer.cs">
+      <DependentUpon>frmQuanLyKhachHang.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Form\frmThongKeQL.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Form\frmThongKeQL.Designer.cs">
+      <DependentUpon>frmThongKeQL.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Form\frmTimKiemKhachHang.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Form\frmTimKiemKhachHang.Designer.cs">
+      <DependentUpon>frmTimKiemKhachHang.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Form\frmTraCuu.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Form\frmTraCuu.Designer.cs">
+      <DependentUpon>frmTraCuu.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Form\frmTrangChu.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Form\frmTrangChu.Designer.cs">
+      <DependentUpon>frmTrangChu.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Form\frmTrangChuQL.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Form\frmTrangChuQL.Designer.cs">
+      <DependentUpon>frmTrangChuQL.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Form\frmDatPhong.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Form\frmDatPhong.Designer.cs">
+      <DependentUpon>frmDatPhong.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Form\frmQuanLyMatHang.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Form\frmQuanLyMatHang.Designer.cs">
+      <DependentUpon>frmQuanLyMatHang.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Form\frmQuanLyNhanVien.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Form\frmQuanLyNhanVien.Designer.cs">
+      <DependentUpon>frmQuanLyNhanVien.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Form\frmQuanLyPhong.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Form\frmQuanLyPhong.Designer.cs">
+      <DependentUpon>frmQuanLyPhong.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Form\frmQuanLyThietBi.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Form\frmQuanLyThietBi.Designer.cs">
+      <DependentUpon>frmQuanLyThietBi.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Form\frmThongKe.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Form\frmThongKe.Designer.cs">
+      <DependentUpon>frmThongKe.cs</DependentUpon>
+    </Compile>
+    <Compile Include="ClassControl\clsListViewItemComparer.cs" />
+    <Compile Include="Logger\LogWritter.cs" />
+    <Compile Include="Program.cs" />
+    <Compile Include="Properties\AssemblyInfo.cs" />
+    <Compile Include="qlKaraoke.designer.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>qlKaraoke.dbml</DependentUpon>
+    </Compile>
+    <EmbeddedResource Include="Form\frmLayLaiMatKhau.resx">
+      <DependentUpon>frmLayLaiMatKhau.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Form\frmChiTietPhong.resx">
+      <DependentUpon>frmChiTietPhong.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Form\frmDangNhap.resx">
+      <DependentUpon>frmDangNhap.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Form\frmDanhSachPhong.resx">
+      <DependentUpon>frmDanhSachPhong.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Form\frmDoiMatKhau.resx">
+      <DependentUpon>frmDoiMatKhau.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Form\frmGioiThieu.resx">
+      <DependentUpon>frmGioiThieu.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Form\frmDatPhong.resx">
+      <DependentUpon>frmDatPhong.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Form\frmQuanLyKhachHang.resx">
+      <DependentUpon>frmQuanLyKhachHang.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Form\frmQuanLyMatHang.resx">
+      <DependentUpon>frmQuanLyMatHang.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Form\frmQuanLyNhanVien.resx">
+      <DependentUpon>frmQuanLyNhanVien.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Form\frmQuanLyPhong.resx">
+      <DependentUpon>frmQuanLyPhong.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Form\frmQuanLyThietBi.resx">
+      <DependentUpon>frmQuanLyThietBi.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Form\frmThongKe.resx">
+      <DependentUpon>frmThongKe.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Form\frmThongKeQL.resx">
+      <DependentUpon>frmThongKeQL.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Form\frmTimKiemKhachHang.resx">
+      <DependentUpon>frmTimKiemKhachHang.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Form\frmTraCuu.resx">
+      <DependentUpon>frmTraCuu.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Form\frmTrangChu.resx">
+      <DependentUpon>frmTrangChu.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Form\frmHoaDon.resx">
+      <DependentUpon>frmHoaDon.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Form\frmTrangChuQL.resx">
+      <DependentUpon>frmTrangChuQL.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Properties\Resources.resx">
+      <Generator>ResXFileCodeGenerator</Generator>
+      <LastGenOutput>Resources.Designer.cs</LastGenOutput>
+      <SubType>Designer</SubType>
+    </EmbeddedResource>
+    <Compile Include="Properties\Resources.Designer.cs">
+      <AutoGen>True</AutoGen>
+      <DependentUpon>Resources.resx</DependentUpon>
+      <DesignTime>True</DesignTime>
+    </Compile>
+    <None Include="Properties\Settings.settings">
+      <Generator>SettingsSingleFileGenerator</Generator>
+      <LastGenOutput>Settings.Designer.cs</LastGenOutput>
+    </None>
+    <Compile Include="Properties\Settings.Designer.cs">
+      <AutoGen>True</AutoGen>
+      <DependentUpon>Settings.settings</DependentUpon>
+      <DesignTimeSharedInput>True</DesignTimeSharedInput>
+    </Compile>
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="App.config" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="qlKaraoke.dbml">
+      <Generator>MSLinqToSQLGenerator</Generator>
+      <LastGenOutput>qlKaraoke.designer.cs</LastGenOutput>
+      <SubType>Designer</SubType>
+    </None>
+    <None Include="qlKaraoke.dbml.layout">
+      <DependentUpon>qlKaraoke.dbml</DependentUpon>
+    </None>
+    <None Include="Resources\1.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\Untitled.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\1610276918_Background-karaoke-dep.jpg" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\profle.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\folder_home.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\mic.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\8adccf1407dace8497cb.jpg" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\bcac27d9f01739496006.jpg" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\1b04dd1c1ad2d38c8ac3.jpg" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\094eb36572abbbf5e2ba.jpg" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\gear %281%29.ico" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\gear.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\gear %281%29.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\6842bce5b82c7172283d.jpg" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\2bec7542718bb8d5e19a.jpg" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\c94f5aee5e279779ce36.jpg" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\gear %281%291.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\ae80b42eb0e779b920f6.jpg" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\2a359a959e5c57020e4d.jpg" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\door %281%29.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\3003591479ddb083e9cc.jpg" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\Thay-the-hinh-dai-dien-tai-khoan-nguoi-dung-mac.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\117127892_2760642600928826_8149084358870197726_n.jpg" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\3a9df0e20d2bc4759d3a %281%29.jpg" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\download %281%29.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\kara.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\kara %281%29.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\4a95dfb05f789626cf69.jpg" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\3254f43743ff8aa1d3ee.jpg" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\e8c2564b98a251fc08b3.jpg" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\2472824 %281%29.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\QLKH.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\ThongKe60.jpg" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\GDTN60.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\QLKH60.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\QLNV60.jpg" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\DMK60.jpg" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\DangXuat60.jpg" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\GioiThieu60.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\Phong60.jpg" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\QLP60.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\QLTTB60.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\QLMH60.jpg" />
+  </ItemGroup>
+  <ItemGroup>
+    <Service Include="{3259AA49-8AA1-44D3-9025-A0B520596A8C}" />
+  </ItemGroup>
+  <ItemGroup>
+    <Content Include="Logo.ico" />
+  </ItemGroup>
+  <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
+</Project>
